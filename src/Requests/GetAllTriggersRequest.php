@@ -6,9 +6,8 @@ namespace CauseCompanyApi\Requests;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\PaginationPlugin\Contracts\Paginatable;
 
-class GetAllTriggers extends Request implements Paginatable
+class GetAllTriggersRequest extends Request
 {
     /**
      * HTTP Method

@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace CauseCompanyApi;
 
+use CauseCompanyApi\Requests\CreateDonationRequest;
+use CauseCompanyApi\Requests\GetAllTriggersRequest;
 use Saloon\Http\Connector;
 use Saloon\Http\Auth\TokenAuthenticator;
 use CauseCompanyApi\Responses\CauseCompanyApiResponse;
+use DonationResource;
+use Saloon\Http\Response;
+use TriggerResource;
 
 class CauseCompanyApi extends Connector
 {
@@ -51,5 +56,21 @@ class CauseCompanyApi extends Connector
     protected function defaultAuth(): TokenAuthenticator
     {
         return new TokenAuthenticator($this->token);
+    }
+
+    /**
+     * Trigger resource
+     */
+    public function trigger(): TriggerResource
+    {
+        return new TriggerResource($this);
+    }
+
+    /**
+     * Donation resource
+     */
+    public function donation(): DonationResource
+    {
+        return new DonationResource($this);
     }
 }
