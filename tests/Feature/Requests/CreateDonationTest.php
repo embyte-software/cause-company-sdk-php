@@ -10,7 +10,7 @@ test('can create donation', function () {
     $causecompanyapi = new CauseCompanyApi('$Mm@Or14M6Xl5vwO');
     $causecompanyapi->withMockClient(mockClient());
 
-    $response = $causecompanyapi->send(new CreateDonationRequest('9d142d49-7c4d-42ee-96b4-a43c491c78ac'));
+    $response = $causecompanyapi->send(new CreateDonationRequest('9d142d49-7c4d-42ee-96b4-a43c491c78ac', 100));
 
     expect($response)->toBeInstanceOf(CauseCompanyApiResponse::class);
 });
