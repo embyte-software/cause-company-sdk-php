@@ -6,8 +6,8 @@ use Saloon\Http\Response;
 
 class DonationResource extends BaseResource
 {
-     public function create(string $triggerId, float $amount): Response
+     public function create(string $triggerId): Response
      {
-         return $this->connector->send(new CreateDonationRequest($triggerId, $amount));
+         return $this->connector->send(new CreateDonationRequest($triggerId));
      }
 }

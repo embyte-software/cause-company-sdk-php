@@ -22,14 +22,12 @@ class CreateDonationRequest extends Request implements HasBody
 
     public function __construct(
         protected string $triggerId,
-        protected float $amount,
     ){}
 
     protected function defaultBody(): array
     {
         return [
             'trigger_id' => $this->triggerId,
-            'amount' => $this->amount,
         ];
     }
 
