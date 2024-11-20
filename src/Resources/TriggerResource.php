@@ -1,5 +1,7 @@
 <?php
 
+namespace CauseCompanyApi\Resources;
+
 use CauseCompanyApi\Requests\GetAllTriggersRequest;
 use Saloon\Http\BaseResource;
 use Saloon\Http\Response;

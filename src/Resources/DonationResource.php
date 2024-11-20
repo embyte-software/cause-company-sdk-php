@@ -1,5 +1,7 @@
 <?php
 
+namespace CauseCompanyApi\Resources;
+
 use CauseCompanyApi\Requests\CreateDonationRequest;
 use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
