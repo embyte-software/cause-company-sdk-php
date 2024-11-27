@@ -15,7 +15,8 @@ class CauseCompanyApi extends Connector
 {
     public function __construct(
         protected readonly string $token,
-        protected readonly string $version = 'v1'
+        protected readonly string $version = 'v1',
+        protected readonly bool $testmode = false,
     ) {}
 
     /**
@@ -32,7 +33,9 @@ class CauseCompanyApi extends Connector
      */
     public function resolveBaseUrl(): string
     {
-        return "https://cause-company.eu-1.sharedwithexpose.com/api/{$this->version}";
+        return $this->testmode
+            ? "https://cause-company.embyte.nl/api/{$this->version}"
+            : "https://app.causecompany.com/api/{$this->version}";
     }
 
     /**
