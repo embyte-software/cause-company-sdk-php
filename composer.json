@@ -6,7 +6,8 @@
     "authors": [
         {
             "name": "embyte-software",
-            "email": "mike@embyte.nl"
+            "email": "mike@embyte.nl",
+            "homepage": "https://www.embyte.nl"
         }
     ],
     "require": {
