@@ -8,8 +8,8 @@ use Saloon\Http\Response;
 
 class AuthResource extends BaseResource
 {
-     public function callback(string $state = null): Response
+     public function callback(string $state = null, ?array $params = []): Response
      {
-         return $this->connector->send(new CreateCallbackRequest($state));
+         return $this->connector->send(new CreateCallbackRequest($state, $params));
      }
 }

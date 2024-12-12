@@ -22,6 +22,7 @@ class CreateCallbackRequest extends Request implements HasBody
 
     public function __construct(
         protected ?string $state,
+        protected ?array $params,
     ){}
 
     /**
@@ -38,6 +39,7 @@ class CreateCallbackRequest extends Request implements HasBody
     {
         return [
             'state' => $this->state,
+            'params' => $this->params,
         ];
     }
 }
