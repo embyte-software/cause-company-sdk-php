@@ -21,13 +21,13 @@ class CreateDonationRequest extends Request implements HasBody
     protected Method $method = Method::POST;
 
     public function __construct(
-        protected string $triggerId,
+        protected string $state,
     ){}
 
     protected function defaultBody(): array
     {
         return [
-            'trigger_id' => $this->triggerId,
+            'state' => $this->state,
         ];
     }
 

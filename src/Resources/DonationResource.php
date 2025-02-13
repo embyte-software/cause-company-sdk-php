@@ -8,8 +8,8 @@ use Saloon\Http\Response;
 
 class DonationResource extends BaseResource
 {
-     public function create(string $triggerId): Response
+     public function create(string $state): Response
      {
-         return $this->connector->send(new CreateDonationRequest($triggerId));
+         return $this->connector->send(new CreateDonationRequest($state));
      }
 }
