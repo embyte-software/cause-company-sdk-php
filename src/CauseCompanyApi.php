@@ -9,6 +9,7 @@ use Saloon\Http\Auth\TokenAuthenticator;
 use CauseCompanyApi\Resources\AuthResource;
 use CauseCompanyApi\Resources\TriggerResource;
 use CauseCompanyApi\Resources\DonationResource;
+use CauseCompanyApi\Resources\AppResource;
 use CauseCompanyApi\Responses\CauseCompanyApiResponse;
 
 class CauseCompanyApi extends Connector
@@ -81,5 +82,13 @@ class CauseCompanyApi extends Connector
     public function auth(): AuthResource
     {
         return new AuthResource($this);
+    }
+
+    /**
+     * App resource
+     */
+    public function app(): AppResource
+    {
+        return new AppResource($this);
     }
 }
