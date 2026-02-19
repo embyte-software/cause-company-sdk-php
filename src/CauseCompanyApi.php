@@ -35,7 +35,7 @@ class CauseCompanyApi extends Connector
     public function resolveBaseUrl(): string
     {
         return $this->testmode
-            ? "https://cause-company.embyte.nl/api/{$this->version}"
+            ? "https://cause-company-dev.on-forge.com/api/{$this->version}"
             : "https://app.causecompany.com/api/{$this->version}";
     }
 
